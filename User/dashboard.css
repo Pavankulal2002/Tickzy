@@ -35,13 +35,14 @@ body
 .container
 {
     display: grid;
-    grid-template-columns: .6fr 1fr 1fr 1fr;
-    grid-template-rows: .2fr .2fr .4fr .6fr .3fr;
-    grid-template-areas: "navbar navbar navbar navbar"
-                         "sidebar header header header"
-                         "sidebar card1 card2 card3"
-                         "sidebar graph graph debitcard"
-                         "sidebar card4 card5 card6";
+    grid-template-columns: .6fr 2.5fr .5fr;
+    grid-template-rows: .2fr .2fr 1.3fr;
+    grid-template-areas:
+    "navbar navbar navbar"
+    "sidebar header header "
+    "sidebar data data"
+    "sidebar data data"
+    "sidebar data data";
                          grid-gap: 1rem;
                          padding: 2rem;
     width: 90%;
