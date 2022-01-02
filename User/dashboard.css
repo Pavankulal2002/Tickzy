@@ -156,9 +156,11 @@ body
 
     .container .navbar .logo img
     {
-        width: 4rem;
+        width: 15rem;
         animation: rotate 8s linear infinite;
-        border-radius: 50%;
+
+        border-radius: 0%;
+        
     }
 
     
