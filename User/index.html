@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- custom js file link  -->
+    <script src="js/script.js" defer></script>
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+     <img class="logo" src="../images/Tickzy cropped (1).png" alt="Tickzy">
+    <nav class="navbar">
+        <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">home</a>
+        <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">upcoming matches</a>
+        <a data-aos="zoom-in-left" data-aos-delay="600" href="#destination">booking history</a>
+     <!---  <a data-aos="zoom-in-left" data-aos-delay="750" href="#services">services</a>  -->
+      <!---<a data-aos="zoom-in-left" data-aos-delay="900" href="#gallery">gallery</a> -->
+      <!---  <a data-aos="zoom-in-left" data-aos-delay="1150" href="#blogs">blogs</a> -->
+    </nav>
+
+    <a data-aos="zoom-in-left" data-aos-delay="1300" href="#book-form" class="btn">book now</a>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <span data-aos="fade-up" data-aos-delay="150">Tickzy</span>
+        <h3 data-aos="fade-up" data-aos-delay="300">Online stadium ticket booking</h3>
+        <p data-aos="fade-up" data-aos-delay="450">Watch your favourite match at stadium by booking your ticket here , We made your work easy and tenction free</p>
+        <a data-aos="fade-up" data-aos-delay="600" href="#" class="btn">book now</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- booking form section starts  -->
+<!---
+<section class="book-form" id="book-form">
+
+    <form action="">
+        <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+            <span>where to?</span>
+            <input type="text" placeholder="place name" value="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+            <span>when?</span>
+            <input type="date" value="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+            <span>how many?</span>
+            <input type="number" placeholder="number of travelers" value="">
+        </div>
+        <input data-aos="zoom-in" data-aos-delay="600" type="submit" value="find now" class="btn">
+    </form>
+
+</section> -->
+
+<!-- booking form section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <div class="video-container" data-aos="fade-right" data-aos-delay="300">
+        <video src="images/about-vid-1.mp4" muted autoplay loop class="video"></video>
+        <div class="controls">
+            <span class="control-btn" data-src="images/about-vid-1.mp4"></span>
+            <span class="control-btn" data-src="images/about-vid-2.mp4"></span>
+            <span class="control-btn" data-src="images/about-vid-3.mp4"></span>
+        </div>
+    </div>
+
+    <div class="content" data-aos="fade-left" data-aos-delay="600">
+        <span>why choose us?</span>
+        <h3>Feel the Intresting cricket</h3>
+        <p>Experience one of the best feeling in the world with a madness of flavour or nationalism</p>
+        <a href="#" class="btn">read more</a>
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- destination section starts  -->
+
+<section class="destination" id="destination">
+
+    <div class="heading">
+        <span>Stadiums</span>
+        <h1>Stadiums giving most thrilling matches</h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="../User/images/M.Chinnaswamy-Stadium.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>M. Chinnaswamy Stadium</h3>
+                <p>Bangalore, Karnataka</p>
+                
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <div class="image">
+                <img src="../User/images/melbourne-cricket-ground-me1215.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Eden Gardens</h3>
+                <p> Kolkata, India.</p>
+               
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <div class="image">
+                <img src="../User/images/M_A_Chidambaram_Stadium.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>M.A. Chidambaram Stadium</h3>
+                <p>Chennai, India.</p>
+               
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <div class="image">
+                <img src="../User/images/wankhade stadium.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Wankhede Stadium</h3>
+                <p>Mumbai,India.</p>
+               
+            </div>
+        </div>
+
+   
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+    AOS.init({
+        duration: 800,
+        offset:150,
+    });
+
+</script>
+
+</body>
+</html>
