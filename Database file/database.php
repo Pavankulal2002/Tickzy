@@ -2,12 +2,12 @@
 
 include_once('dbconnect.php'); //my connection is here
 
-class Database extends Connection{
+class Database extends Dbconnect{
 
 
 	public function __construct(){
 
-		parent::__construct();//put this if naay default constructor and class na iya ge extendnan para ma apil sad diri
+		parent::__construct();
 		//above code copy the default constructor of the class extended
 
 	}//endDefaultConstructor
