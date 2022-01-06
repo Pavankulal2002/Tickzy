@@ -372,8 +372,9 @@ body
 
     .header .tittle h1
     {
-        font-size: 2.5rem;
-        font-weight: normal;
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-decoration: underline;
     }
 /*HEADER CSS END*/
 
@@ -738,10 +739,11 @@ thead th {
     }
 table {
         border-collapse: collapse;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.918);
+        margin-left: 10px;
     }
 thead {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.924);
     color: white;
     font-size: 0.875rem;
     letter-spacing: 2%;
@@ -760,5 +762,40 @@ button:hover {
     opacity: 0.8;
     cursor: pointer;
 }
-                         
-
+.button1 {
+    display: block;
+    width: 65px;
+    height: 6px;
+    background: #2ba123;
+    padding: 9px;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    line-height: 7px;
+} 
+.button2 {
+    display: block;
+    width: 65px;
+    height: 6px;
+    background: #c22a2a;
+    padding: 9px;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    line-height: 7px;
+} 
+a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.click{
+    margin-top: 10px;
+    font-size: medium;
+    margin-left: 10px;
+}
+.click>a{
+    margin-top: 10px;
+    font-size: medium;
+}

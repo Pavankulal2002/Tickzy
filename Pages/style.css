@@ -132,14 +132,3 @@ color: #fff;
   color: black;
 }
 
-button {
-  background-color: #55b0da;
-  color: white;
-  padding: 14px 20px;
-  margin: 18px 5px;
-  border: none;
-  cursor: pointer;
-  width: 50%;
-  border-radius: 5px;
-
-}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dashboard.css">
+
 </head>
 
 <body>     
@@ -119,10 +120,10 @@
                             <td>".$row['s_location']."</td>
                             <td>".$row['capacity']."</td>
                             <td>
-                            <a href='updatestadium.php?si=$row[stadium_id]&sn=$row[s_name]&sl=$row[s_location]&sc=$row[capacity]'>UPDATE</a>
+                            <a class='button1' href='updatestadium.php?si=$row[stadium_id]&sn=$row[s_name]&sl=$row[s_location]&sc=$row[capacity]'>UPDATE</a>
                             </td>
                             <td>
-                            <a href='deletestadium.php?si=$row[stadium_id]' onclick='return checkdelete()'>DELETE</a>
+                            <a class='button2' href='deletestadium.php?si=$row[stadium_id]' onclick='return checkdelete()'>DELETE</a>
                             </td>
                         </tr>
                         ";
@@ -131,7 +132,7 @@
                
             ?>
             </table>
-            <h2>To add stadiums <a href="addstadium.php">click here</a></h2>
+            <h2 class="click">To add stadiums <a  href="addstadium.php">click here</a></h2>
         </div>
        
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
