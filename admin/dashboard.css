@@ -26,7 +26,7 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(3468697.jpg);
+    background: url("3468697.jpg");
     background-size: cover;
     background-position: center;
     
@@ -43,8 +43,8 @@ body
     "sidebar data data"
     "sidebar data data"
     "sidebar data data";
-                         grid-gap: 1rem;
-                         padding: 2rem;
+    grid-gap: 1rem;
+    padding: 2rem;
     width: 90%;
     min-height: 85vh;
     background: linear-gradient(to top right, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.658));
@@ -786,6 +786,7 @@ button:hover {
     font-weight: bold;
     line-height: 7px;
 } 
+
 a:hover {
     opacity: 0.8;
     cursor: pointer;

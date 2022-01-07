@@ -1,16 +1,15 @@
 
 /*set border to the form*/
-body {
-    background-image: url("../images/5.jpg");
-    /* background-color: rgb(92, 194, 207); */
+html,body {
     height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    resize: both;
-    overflow: hidden;
   }
-  
+  html { 
+    background: url("../images/6.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
   
   form {
     padding: 80px 300px;

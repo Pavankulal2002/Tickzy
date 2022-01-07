@@ -132,7 +132,7 @@
                
             ?>
             </table>
-            <h2 class="click">To add stadiums <a  href="addstadium.php">click here</a></h2>
+            <h2 class="click">To add stadiums <a class="button3" href="addstadium.php">click here</a></h2>
         </div>
        
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
