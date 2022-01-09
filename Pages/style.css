@@ -50,7 +50,7 @@ color: #fff;
   font-size: 18px;
   font-weight: 500;
   padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: 30px;
   transition: all 0.3s ease;
 }
 .menu ul li a:hover{
@@ -108,7 +108,7 @@ color: #fff;
 .center .btns button{
   height: 55px;
   width: 170px;
-  border-radius: 5px;
+  border-radius: 30px;
   border: none;
   margin: 0 10px;
   border: 2px solid white;
@@ -118,6 +118,10 @@ color: #fff;
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
+}
+.btns button:hover{
+  border: 2px solid black;
+  
 }
 .center .btns button:first-child{
   color: #fff;
