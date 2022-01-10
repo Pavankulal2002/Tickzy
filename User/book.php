@@ -4,9 +4,9 @@
 	$conn = mysqli_connect("localhost","root","","tickzy");
 	
 	// mysqli_connect("servername","username","password","database_name")
-	
+
 	// Get all the categories from category table
-	$sql = "SELECT * FROM `matches` WHERE date='{$date}'";
+	$sql = "SELECT * FROM `matches`";
 	$all_categories = mysqli_query($conn,$sql);
 
 	// The following code checks if the submit button is clicked
@@ -47,29 +47,35 @@
 </head>
 <body>
 	<form method="POST">
-		<label>date of the match</label>
-		<input type="date" name="date" required><br>
-		<label>Match details</label>
-		<select name="match1">
-			<?php
-				// use a while loop to fetch data
-				// from the $all_categories variable
-				// and individually display as an option
-				while ($category = mysqli_fetch_array(
-						$all_categories,MYSQLI_ASSOC)):;
-			?>
-				<option value="<?php echo $category["match"];
-					// The value we usually set is the primary key
-				?>">
-					<?php echo $category["match"];
-						// To show the category name to the user
+		<div>
+		
+			<label>Select The Match</label>
+			<select name="match1">
+				<?php
+
+					define("space","  -  ");
+					// use a while loop to fetch data
+					// from the $all_categories variable
+					// and individually display as an option
+					while ($category = mysqli_fetch_array(
+							$all_categories,MYSQLI_ASSOC)):;
+				?>
+					<option value="<?php echo $category["match"];
+						// The value we usually set is the primary key
+					?>">
+						<?php echo $category["match"];
+
+						echo constant ("space");
+						echo $category["date"];
+							// To show the category name to the user
 					?>
-				</option>
-			<?php
-				endwhile;
-				// While loop must be terminated
-			?>
-		</select>
+					</option>
+				<?php
+					endwhile;
+					// While loop must be terminated
+				?>
+			</select>
+		</div>
 		<br>
 		<input type="submit" value="submit" name="submit">
 	</form>
