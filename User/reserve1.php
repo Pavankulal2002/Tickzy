@@ -1,3 +1,25 @@
+<?php
+
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+
+	$database = "tickzy";
+
+	$conn = mysqli_connect($servername,
+		$username, $password, $database);
+
+	if(!$conn) {
+		die("Error". mysqli_connect_error());
+	}
+	
+    $select= "SELECT * FROM 'matches'";
+    $result=mysqli_query($conn,$select);
+    $message ='';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +38,7 @@
 
     <!-- custom js file link  -->
     <script src="js/script.js" defer></script>
+    
 
 </head>
 <body>
@@ -48,27 +71,33 @@
 
 <section class="book-form" id="book-form">
 
-    <form action="">
+    <form action="reserve1.php" method="POST">
 
         <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
             <span>Choose the date</span>
             <input type="date" value="">
+           
         </div>
-
-        <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
-            <span>Select the match</span>
-            <input type="text" placeholder="place name" value="">
-        </div>
-        <!----
         
-        <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
-            <span>how many?</span>
-            <input type="number" placeholder="number of travelers" value="">
+
+        <div  data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+          <label>Select the match</label>
+            <select name="match" class="form control form control-lg" id="match">
+                <option class="options" value="" disabled selected>Select Match</option>
+                <?php foreach($result as $key => $value){ ?>
+                    <option value="<?=$value['match'] ; ?>"><?=$value['match'] ; ?> </option>
+
+              <?php  } ?>
+
+            </select>
+            
         </div>
-    -->
+        
 
+        <div>
+            <a data-aos="zoom-in-left" data-aos-delay="300" href="reserve2.php" class="btn" type="submit">Next</a>
 
-        <input data-aos="zoom-in" data-aos-delay="600" type="submit" href="reserve2.php" value="Next" class="btn">
+        </div>
     </form> 
 
 </section> 

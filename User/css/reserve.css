@@ -42,6 +42,10 @@ section {
   padding: 3rem 9%;
 }
 
+.options{
+ background-color: #111;
+}
+
 .heading {
   text-align: center;
   margin-bottom: 2rem;
@@ -132,6 +136,7 @@ section {
   width: 80%;
   margin: 1rem auto;
   margin-top: 15rem;
+  margin-bottom: 50%;
   background: #222;
   border-radius: 1rem;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
@@ -161,6 +166,12 @@ section {
   font-size: 1.4rem;
   color: #aaa;
 }
+.book-form form .inputBox label {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  color: #aaa;
+}
 
 .book-form form .inputBox input {
   width: 100%;
@@ -173,6 +184,19 @@ section {
   background: none;
   margin-top: 1rem;
 }
+.book-form form .inputBox select {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border-radius: 5rem;
+  border: 0.2rem solid #29d9d5;
+  font-size: 1.6rem;
+  color: #aaa;
+  text-transform: none;
+  background: none;
+  margin-top: 1rem;
+}
+
+
 
 .book-form form .btn {
   -webkit-box-flex: 1;
