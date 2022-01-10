@@ -34,10 +34,7 @@
                 </div>  -->
 
                 <div class="account">
-                   <!-- <li> <i class="fa fa-user" height="25px" width="25px"></i> </li> -->
-                  <!---  <img src="fa.img"  width="25px" height="25px" alt="">  -->
-                    <!-- <span class="name">Pavan</span>
-                    <span class="username">@kulalpavan</span> -->
+                    <a class='btn3' href='changepswd.php'>Change Password</a>
                 </div>
             </div>
         </div>
@@ -70,12 +67,12 @@
 
                 <li>
                     <i class="fa fa-history"></i>
-                    <a href="history.html">History</a>
+                    <a href="seats.php">Seats</a>
                 </li>
 
                 <li>
                     <i class="fa fa-info-circle"></i>
-                    <a href="logout.html">Logout</a>
+                    <a href="logout.php">Logout</a>
                 </li>  
             </div>
             </ul>
@@ -132,7 +129,7 @@
                
             ?>
             </table>
-            <h2 class="click">To add stadiums <a class="button3" href="addstadium.php">click here</a></h2>
+            <h2 class="click">To add stadiums <a class="" href="addstadium.php">click here</a></h2>
         </div>
             </div>
             </body>  

@@ -379,7 +379,7 @@ body
 /*HEADER CSS END*/
 
 /*ROW-1 CARDS CSS START*/
-.row-1
+/* .row-1
 {
     display: flex;
     align-items: center;
@@ -421,18 +421,18 @@ body
 .row-1 .box .content a{
     font-size: 1.2rem;
     color: #33cc33;
-}
+} */
 /*ROW-1 CARDS CSS END*/
 
 /*DEBIT-CARD CSS*/
-.debitcard img
+/* .debitcard img
 {
     border-radius: 22px;
-}
+} */
 /*DEBIT-CARD CSS*/ 
 
 /*GRAPH CSS START*/
-.graph
+/* .graph
 {
     position: relative; 
 }
@@ -549,11 +549,11 @@ body
         height: 80%;
         filter: hue-rotate(0);
     }
-}
+} */
 /*GRAPH CSS END*/
 
 /*ROW-2 CARDS CSS START*/
-.row-2
+/* .row-2
 {
     display: flex;
     justify-content: center;
@@ -580,7 +580,7 @@ body
 {
     font-size: 2.2rem;
     font-weight: 500;
-}
+} */
 /*ROW-2 CARDS CSS END*/
 
 /* RESPONSIVE TEMPLATES DESIGN START FROM HERE*/   
@@ -618,7 +618,7 @@ body
    
 
     .container
-{
+    {
     background: transparent;
     display: grid;
     grid-template-columns: 1fr;
@@ -786,7 +786,18 @@ button:hover {
     font-weight: bold;
     line-height: 7px;
 } 
-
+.btn3 {
+    display: block;
+    width: 140px;
+    height: 20px;
+    background: #2ba123;
+    padding: 9px;
+    text-align: center;
+    border-radius: 18px;
+    color: white;
+    font-weight: bold;
+   
+} 
 a:hover {
     opacity: 0.8;
     cursor: pointer;

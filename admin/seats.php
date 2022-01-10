@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matches</title>
+    <title>History</title>
     <link rel="stylesheet" type="text/css"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dashboard.css">
@@ -12,7 +12,7 @@
 <body>     
     <div class="container">
         <div class="navbar">
-            <div class="logo d">
+        <div class="logo d">
                 <img src="../images/Tickzy cropped.png" width="36px" alt="Tickzy">
             </div>
 
@@ -53,20 +53,21 @@
                      
                 </li>
 
-                <li Class="dashboard">
+                <li>
                     <i class="fa fa-folder-open-o"></i>
-                    <a href="matches.html">Matches</a>
+                    <a href="matches.php">Matches</a>
+                    
+                </li>
+
+                <li  >
+                    <i class="fa fa-credit-card-alt"></i>
+                    <a href="booking.php">Booking</a>
                     <div class="togglebtn"></div> 
                 </li>
 
-                <li>
-                    <i class="fa fa-credit-card-alt"></i>
-                    <a href="booking.php">Booking</a>
-                </li>
-
-                <li>
+                <li Class="dashboard">
                     <i class="fa fa-history"></i>
-                    <a href="seats.php">Seats</a>
+                    <a href="#">Seats</a>
                 </li>
 
                 <li>
@@ -80,17 +81,17 @@
         <div class="header">
             <div class="tittle">
                 <!-- <h2>hii Pavan,</h2> -->
-                <h1>Match List</h1>
+                <h1>Seats List</h1>
             </div>
         </div>
         <div>
             <table class="">
                 <thead>
                 <tr>
-                    <th>MATCH NO</th>
-                    <th>DATE</th>
-                    <th>MATCH</th>
-                    <th>STADIUM</th>
+                    <th>SEAT ID</th>
+                    <th>SEAT TYPE</th>
+                    <th>SLOTS</th>
+                    <th>PRICE</th>
                     <th colspan="2">OPERATIONS</th>
                 </tr>
                 </thead>
@@ -98,7 +99,7 @@
                
                 include ("../Database file/dbconnect.php");
 
-                $sql = "SELECT * FROM `matches`";
+                $sql = "SELECT * FROM `seats`";
                 $result = mysqli_query($conn, $sql);
 
                 // Find the number of records returned
@@ -111,15 +112,15 @@
                     while($row = mysqli_fetch_assoc($result)){
                         echo "
                         <tr>
-                            <td>".$row['match_no']."</td>
-                            <td>".$row['date']."</td>
-                            <td>".$row['match']."</td>
-                            <td>".$row['stadium']."</td>
+                            <td>".$row['seat_id']."</td>
+                            <td>".$row['seat_type']."</td>
+                            <td>".$row['slots']."</td>
+                            <td>".$row['price']."</td>
                             <td>
-                            <a class='button1' href='updatematch.php?mn=$row[match_no]&date=$row[date]&match=$row[match]&stdm=$row[stadium]'>UPDATE</a>
+                            <a class='button1' href='updateseats.php?si=$row[seat_id]&st=$row[seat_type]&sl=$row[slots]&pr=$row[price]'>UPDATE</a>
                             </td>
                             <td>
-                            <a class='button2' href='deletematch.php?mn=$row[matchno]' onclick='return checkdelete()'>DELETE</a>
+                            <a class='button2' href='deleteseats.php?si=$row[seat_id]' onclick='return checkdelete()'>DELETE</a>
                             </td>
                         </tr>
                         ";
@@ -128,8 +129,10 @@
                
             ?>
             </table>
-            <h2 class="click">To add matches <a class="button3" href="addmatch.php">click here</a></h2>
+            <h2 class="click">To add stadiums <a class="" href="addseats.php">click here</a></h2>
         </div>
+
+
     </div>
 </body>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

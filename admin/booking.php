@@ -33,10 +33,7 @@
                 </div>  -->
 
                 <div class="account">
-                   <!-- <li> <i class="fa fa-user" height="25px" width="25px"></i> </li> -->
-                  <!---  <img src="fa.img"  width="25px" height="25px" alt="">  -->
-                    <!-- <span class="name">Pavan</span>
-                    <span class="username">@kulalpavan</span> -->
+                    <a class='btn3' href='changepswd.php'>Change Password</a>
                 </div>
             </div>
         </div>
@@ -71,7 +68,7 @@
 
                 <li>
                     <i class="fa fa-history"></i>
-                    <a href="history.html">History</a>
+                    <a href="seats.php">Seats</a>
                 </li>
 
                 <li>
