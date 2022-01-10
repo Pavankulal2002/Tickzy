@@ -23,7 +23,7 @@
           while ($row = mysqli_fetch_assoc($result)) {
             if (password_verify($password, $row['password'])) {
               
-                header("Location: ../User/dashboard.html");
+                header("Location: ../User/index.html");
             }else{
                 header('location: logout.php');
                 $errorMsg = "Email or Password is invalid";
