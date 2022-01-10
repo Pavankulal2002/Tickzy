@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Stadium</title>
     <link rel="stylesheet" type="text/css"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dashboard.css">
-</head>     
+
+</head>
 
 <body>     
     <div class="container">
@@ -17,7 +18,7 @@
                 <img src="../images/Tickzy cropped.png" width="36px" alt="Tickzy">
             </div>
 
-           ,<!--- <div class="searchbox d">
+           <!--- <div class="searchbox d">
                 <form action="#">
                     <input type="text" placeholder="Search">
                     <i class="fa fa-search"></i>
@@ -40,16 +41,18 @@
 
         <div class="sidebar bg">
             <ul>
-                <li class="dashboard">
+                <div class="toggle">
+                <li >
                     <i class="fa fa-signal"></i>
-                    <a href="#">Dashboard</a>  
+                    <a href="dashboard.html">Dashboard</a>  
                     <div class="togglebtn"></div>  
                 </li>
   
-          <div class="toggle">
-                <li>
+         
+                <li Class="dashboard">
                     <i class="fa fa-globe"></i>
-                    <a href="stadium.php">Stadiums</a>
+                    <a href="#">Stadiums</a>
+                    <div class="togglebtn"></div>  
                 </li>
 
                 <li>
@@ -77,13 +80,59 @@
 
         <div class="header">
             <div class="tittle">
-                <h2>Hi Admin</h2>
-                <h1>Overview</h1>
+                <!-- <h2>hii Pavan,</h2> -->
+                <h1>Stadium List</h1>
             </div>
         </div>
-        
-    </div>
-</body>  
+        <div>
+            <table class="">
+                <thead>
+                <tr>
+                    <th>STADIUM ID</th>
+                    <th>STADIUM NAME</th>
+                    <th>LOCATION</th>
+                    <th>CAPACITY</th>
+                    <th colspan="2">OPERATIONS</th>
+                </tr>
+                </thead>
+            <?php
+               
+                include ("../Database file/dbconnect.php");
+
+                $sql = "SELECT * FROM `stadiums`";
+                $result = mysqli_query($conn, $sql);
+
+                // Find the number of records returned
+                $num = mysqli_num_rows($result);
+                // echo $num;
+                // echo " records found in the DataBase<br>";
+
+                if($num> 0){
+                    // We can fetch in a better way using the while loop
+                    while($row = mysqli_fetch_assoc($result)){
+                        echo "
+                        <tr>
+                            <td>".$row['stadium_id']."</td>
+                            <td>".$row['s_name']."</td>
+                            <td>".$row['s_location']."</td>
+                            <td>".$row['capacity']."</td>
+                            <td>
+                            <a class='button1' href='updatestadium.php?si=$row[stadium_id]&sn=$row[s_name]&sl=$row[s_location]&sc=$row[capacity]'>UPDATE</a>
+                            </td>
+                            <td>
+                            <a class='button2' href='deletestadium.php?si=$row[stadium_id]' onclick='return checkdelete()'>DELETE</a>
+                            </td>
+                        </tr>
+                        ";
+                    }
+                }
+               
+            ?>
+            </table>
+            <h2 class="click">To add stadiums <a class="" href="addstadium.php">click here</a></h2>
+        </div>
+            </div>
+            </body>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
         $(document).ready(function(){
@@ -95,6 +144,11 @@
                 $(".togglebtn").toggleClass("active");
             });
         });
+</script>
+<script>
+    function checkdelete(){
+        return confirm('Are you sure want to delete this record?');
+    }
 </script>
 </html>
 

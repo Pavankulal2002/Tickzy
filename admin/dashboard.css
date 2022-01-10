@@ -26,7 +26,7 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(3468697.jpg);
+    background: url("3468697.jpg");
     background-size: cover;
     background-position: center;
     
@@ -43,8 +43,8 @@ body
     "sidebar data data"
     "sidebar data data"
     "sidebar data data";
-                         grid-gap: 1rem;
-                         padding: 2rem;
+    grid-gap: 1rem;
+    padding: 2rem;
     width: 90%;
     min-height: 85vh;
     background: linear-gradient(to top right, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.658));
@@ -372,13 +372,14 @@ body
 
     .header .tittle h1
     {
-        font-size: 2.5rem;
-        font-weight: normal;
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-decoration: underline;
     }
 /*HEADER CSS END*/
 
 /*ROW-1 CARDS CSS START*/
-.row-1
+/* .row-1
 {
     display: flex;
     align-items: center;
@@ -420,18 +421,18 @@ body
 .row-1 .box .content a{
     font-size: 1.2rem;
     color: #33cc33;
-}
+} */
 /*ROW-1 CARDS CSS END*/
 
 /*DEBIT-CARD CSS*/
-.debitcard img
+/* .debitcard img
 {
     border-radius: 22px;
-}
+} */
 /*DEBIT-CARD CSS*/ 
 
 /*GRAPH CSS START*/
-.graph
+/* .graph
 {
     position: relative; 
 }
@@ -548,11 +549,11 @@ body
         height: 80%;
         filter: hue-rotate(0);
     }
-}
+} */
 /*GRAPH CSS END*/
 
 /*ROW-2 CARDS CSS START*/
-.row-2
+/* .row-2
 {
     display: flex;
     justify-content: center;
@@ -579,7 +580,7 @@ body
 {
     font-size: 2.2rem;
     font-weight: 500;
-}
+} */
 /*ROW-2 CARDS CSS END*/
 
 /* RESPONSIVE TEMPLATES DESIGN START FROM HERE*/   
@@ -617,7 +618,7 @@ body
    
 
     .container
-{
+    {
     background: transparent;
     display: grid;
     grid-template-columns: 1fr;
@@ -726,7 +727,87 @@ body
         font-size: 7px;
     }
 }
+/* table styling */
                         
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
 
-                         
-
+thead th {
+     width: 20%;
+    }
+table {
+        border-collapse: collapse;
+        background-color: rgba(255, 255, 255, 0.918);
+        margin-left: 10px;
+    }
+thead {
+    background-color: rgba(51, 51, 51, 0.924);
+    color: white;
+    font-size: 0.875rem;
+    letter-spacing: 2%;
+    }
+button{
+    background-color: #b72c2c; 
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.button1 {
+    display: block;
+    width: 65px;
+    height: 6px;
+    background: #2ba123;
+    padding: 9px;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    line-height: 7px;
+} 
+.button2 {
+    display: block;
+    width: 65px;
+    height: 6px;
+    background: #c22a2a;
+    padding: 9px;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    line-height: 7px;
+} 
+.btn3 {
+    display: block;
+    width: 140px;
+    height: 20px;
+    background: #2ba123;
+    padding: 9px;
+    text-align: center;
+    border-radius: 18px;
+    color: white;
+    font-weight: bold;
+   
+} 
+a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.click{
+    margin-top: 10px;
+    font-size: medium;
+    margin-left: 10px;
+}
+.click>a{
+    margin-top: 10px;
+    font-size: medium;
+}
