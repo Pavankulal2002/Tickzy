@@ -114,12 +114,12 @@
                             <td>".$row['match_no']."</td>
                             <td>".$row['date']."</td>
                             <td>".$row['match']."</td>
-                            <td>".$row['stadium']."</td>
+                            <td>".$row['venue']."</td>
                             <td>
-                            <a class='button1' href='updatematch.php?mn=$row[match_no]&date=$row[date]&match=$row[match]&stdm=$row[stadium]'>UPDATE</a>
+                            <a class='button1' href='updatematch.php?mn=$row[match_no]&date=$row[date]&match=$row[match]&stdm=$row[venue]'>UPDATE</a>
                             </td>
                             <td>
-                            <a class='button2' href='deletematch.php?mn=$row[matchno]' onclick='return checkdelete()'>DELETE</a>
+                            <a class='button2' href='deletematch.php?mn=$row[match_no]' onclick='return checkdelete()'>DELETE</a>
                             </td>
                         </tr>
                         ";
