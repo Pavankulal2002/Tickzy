@@ -1,5 +1,6 @@
 <?php
 	include ("../Database file/dbconnect.php");
+    error_reporting(0);
 
     $stadiumid = $_GET['si'];
 	$sname = $_GET['sn'];

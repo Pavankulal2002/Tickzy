@@ -15,7 +15,7 @@
                 <label><b>Match Number</b></label>
                 <input type="text" placeholder="Enter Match Number" name="matchno" id="matchno" required>
                 <label><b>Match Date</b></label>
-                <input type="text" placeholder="Enter Match Date" name="date" id="date" required>
+                <input type="date" placeholder="Enter Match Date" name="date" id="date" required>
                 <label><b>Match</b></label>
                 <input type="text" placeholder="Enter Match" name="match" id="match" required>
                 <label><b>Stadium</b></label>
@@ -40,14 +40,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$stadium=$_POST["stadium"];
 			
 	
-	$sql = "INSERT INTO `matches` (`match_no`, `m_date`, `match_name`, `stadium`) VALUES ('$matchno', '$date', '$match', '$stadium')";
+	$sql = "INSERT INTO `matches` (`match_no`, `date`, `match`, `venue`) VALUES ('$matchno', '$date', '$match', '$stadium')";
 	
 	$result = mysqli_query($conn, $sql);
 	
 	if($result) {
         echo "<script>alert('Data inserted successfully')</script>";
         ?>
-        <meta http-equiv="refresh" content="0;url=http://localhost/Tickzy/admin/stadium.php" /> 
+        <meta http-equiv="refresh" content="0;url=http://localhost/Tickzy/admin/matches.php" /> 
         <?php
             }
             else{

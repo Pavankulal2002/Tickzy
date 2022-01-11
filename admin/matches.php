@@ -144,6 +144,11 @@
             });
         });
 </script>
+<script>
+    function checkdelete(){
+        return confirm('Are you sure want to delete this record?');
+    }
+</script>
 </html>
 
 

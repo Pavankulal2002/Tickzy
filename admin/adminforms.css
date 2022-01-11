@@ -21,7 +21,8 @@
     /*assign full width inputs*/
 
     input[type=text],
-    input[type=password] {
+    input[type=password],
+    input[type=date] {
         width: 100%;
         padding: 12px 20px;
         margin: 15px 0;
@@ -58,6 +59,7 @@
         background-color: rgb(46 59 66 / 53%);;
         
     }
+
     .signup:hover{
         opacity: 0.8;
     }

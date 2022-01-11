@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History</title>
+    <title>Seats</title>
     <link rel="stylesheet" type="text/css"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dashboard.css">
@@ -99,7 +99,7 @@
                
                 include ("../Database file/dbconnect.php");
 
-                $sql = "SELECT * FROM `seats`";
+                $sql = "SELECT * FROM `accomodation`";
                 $result = mysqli_query($conn, $sql);
 
                 // Find the number of records returned
@@ -112,15 +112,15 @@
                     while($row = mysqli_fetch_assoc($result)){
                         echo "
                         <tr>
-                            <td>".$row['seat_id']."</td>
-                            <td>".$row['seat_type']."</td>
-                            <td>".$row['slots']."</td>
-                            <td>".$row['price']."</td>
+                            <td>".$row['acc_id']."</td>
+                            <td>".$row['acc_type']."</td>
+                            <td>".$row['acc_slot']."</td>
+                            <td>".$row['acc_price']."</td>
                             <td>
-                            <a class='button1' href='updateseats.php?si=$row[seat_id]&st=$row[seat_type]&sl=$row[slots]&pr=$row[price]'>UPDATE</a>
+                            <a class='button1' href='updateseats.php?ai=$row[acc_id]&at=$row[acc_type]&as=$row[acc_slot]&ap=$row[acc_price]'>UPDATE</a>
                             </td>
                             <td>
-                            <a class='button2' href='deleteseats.php?si=$row[seat_id]' onclick='return checkdelete()'>DELETE</a>
+                            <a class='button2' href='deleteseats.php?ai=$row[acc_id]' onclick='return checkdelete()'>DELETE</a>
                             </td>
                         </tr>
                         ";
@@ -129,7 +129,7 @@
                
             ?>
             </table>
-            <h2 class="click">To add stadiums <a class="" href="addseats.php">click here</a></h2>
+            <h2 class="click">To add seats <a class="" href="addseats.php">click here</a></h2>
         </div>
 
 
@@ -146,6 +146,10 @@
                 $(".togglebtn").toggleClass("active");
             });
         });
+
+    function checkdelete(){
+        return confirm('Are you sure want to delete this record?');
+    }
 </script>
 </html>
 

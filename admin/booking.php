@@ -90,10 +90,10 @@
             <table class="">
                 <thead>
                 <tr>
-                    <th>BOOKING ID</th>
-                    <th>USER NAME</th>
-                    <th>STADIUM</th>
+                    <th>MATCH ID</th>
                     <th>MATCH</th>
+                    <th>DATE</th>
+                    
                     <!-- <th colspan="2">OPERATIONS</th> -->
                 </tr>
                 </thead>
@@ -101,7 +101,7 @@
                
                 include ("../Database file/dbconnect.php");
 
-                $sql = "SELECT * FROM `booking`";
+                $sql = "SELECT * FROM `book`";
                 $result = mysqli_query($conn, $sql);
 
                 // Find the number of records returned
@@ -114,10 +114,9 @@
                     while($row = mysqli_fetch_assoc($result)){
                         echo "
                         <tr>
-                            <td>".$row['booking_id']."</td>
-                            <td>".$row['user_name']."</td>
-                            <td>".$row['stadium']."</td>
-                            <td>".$row['match']."</td>
+                            <td>".$row['match_id']."</td>
+                            <td>".$row['match1']."</td>
+                            <td>".$row['date']."</td>
                         </tr>
                         ";
                     }
