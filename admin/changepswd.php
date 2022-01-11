@@ -18,6 +18,8 @@
                 <input type="password" placeholder="Enter Current Password" name="cpassword" id="cpassword" required>
                 <label><b>New Password</b></label>
                 <input type="password" placeholder="Enter New Password" name="npassword" id="npassword" required>
+                <label><b>Confirm New Password</b></label>
+                <input type="password" placeholder="Re-Enter New Password" name="cnpassword" id="cnpassword" required>
                 <button type="submit">SUBMIT</button>
             </div>
         </form>
@@ -29,10 +31,12 @@
 
 <?php
 include ("../Database file/dbconnect.php");
-	
-
-if($_SERVER["REQUEST_METHOD"] == "POST") {	
 
 
-}
+        $username = $_POST['username'];
+        $password = $_POST['cpassword'];
+        $newpassword = $_POST['npassword'];
+        $confirmnewpassword = $_POST['cnpassword'];
+
+        
 ?>

@@ -2,15 +2,15 @@
 include ("../Database file/dbconnect.php");
 error_reporting(0);
 
-$matchno=$_GET['mn'];
-$sql="DELETE FROM `matches` WHERE match_no='$matchno'";
+$seat_id=$_GET['ai'];
+$sql="DELETE FROM `accomodation` WHERE acc_id='$seat_id'";
 
 $result=mysqli_query($conn,$sql);
 
 if($result) {
     echo "<script>alert('Data deleted successfully')</script>";
     ?>
-    <meta http-equiv="refresh" content="0;url=http://localhost/Tickzy/admin/matches.php" /> 
+    <meta http-equiv="refresh" content="0;url=http://localhost/Tickzy/admin/seats.php" /> 
     <?php
 }
 else{

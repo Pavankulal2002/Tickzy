@@ -12,14 +12,14 @@
 	$match = $_POST["match"];
 	$stadium=$_POST["stadium"];
 
-	$sql ="UPDATE matches SET match_no='$matchno',m_date='$date',match_name='$match',stadium='$stadium' WHERE match_no='$matchno'";
+	$sql ="UPDATE matches SET match_no='$matchno',date='$date',match='$match',venue='$stadium' WHERE match_no='$matchno'";
 	
 	$result = mysqli_query($conn, $sql);
 	
 	if($result) {
         echo "<script>alert('Data updated successfully')</script>";
         ?>
-        <meta http-equiv="refresh" content="0;url=http://localhost/Tickzy/admin/stadium.php" /> 
+        <meta http-equiv="refresh" content="0;url=http://localhost/Tickzy/admin/matches.php" /> 
         <?php
             }
             else{
@@ -41,13 +41,13 @@
 
 <body>
     <div class="wrapper">
-    <form action="updatematches.php" method="POST">
+    <form action="updatematch.php" method="POST">
             <div class="container">
             <h1>Update Matches</h1>
                 <label><b>Match No</b></label>
                 <input type="text"  name="matchno" id="matchno" value="<?php echo "$matchno" ?>" required>
                 <label><b>Date</b></label>
-                <input type="text"  name="date" id="date" value="<?php echo "$date"?>" required>
+                <input type="date"  name="date" id="date" value="<?php echo "$date"?>" required>
                 <label><b>Match</b></label>
                 <input type="text"  name="match" id="match" value="<?php echo "$match"?>" required>
                 <label><b>Stadium</b></label>
