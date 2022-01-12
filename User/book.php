@@ -47,7 +47,7 @@
 	// mysqli_connect("servername","username","password","database_name")
 
 	// Get all the categories from category table
-	$sql2 = "SELECT `date` FROM `matches` WHERE `match`= 'Aus vs Eng' ";
+	$sql2 = "SELECT `date` FROM `matches` WHERE `match`= '{ '$_POST['match1']' }' ";
 	$all_categories2 = mysqli_query($conn,$sql2);
 
 	// The following code checks if the submit button is clicked
