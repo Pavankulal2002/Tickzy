@@ -87,7 +87,7 @@
             <table class="">
                 <thead>
                 <tr>
-                    <th>MATCH NO</th>
+                    <th>MATCH ID</th>
                     <th>DATE</th>
                     <th>MATCH</th>
                     <th>STADIUM</th>
@@ -98,7 +98,7 @@
                
                 include ("../Database file/dbconnect.php");
 
-                $sql = "SELECT * FROM `matches`";
+                $sql = "SELECT * FROM `origin`";
                 $result = mysqli_query($conn, $sql);
 
                 // Find the number of records returned
@@ -111,15 +111,16 @@
                     while($row = mysqli_fetch_assoc($result)){
                         echo "
                         <tr>
-                            <td>".$row['match_no']."</td>
+                            <td>".$row['match_id']."</td>
                             <td>".$row['date']."</td>
-                            <td>".$row['match']."</td>
+                            <td>".$row['match_desc']."</td>
                             <td>".$row['venue']."</td>
+
                             <td>
-                            <a class='button1' href='updatematch.php?mn=$row[match_no]&date=$row[date]&match=$row[match]&stdm=$row[venue]'>UPDATE</a>
+                            <a class='button1' href='updatematch.php?mn=$row[match_id]&date=$row[date]&match=$row[match_desc]&stdm=$row[venue]'>UPDATE</a>
                             </td>
                             <td>
-                            <a class='button2' href='deletematch.php?mn=$row[match_no]' onclick='return checkdelete()'>DELETE</a>
+                            <a class='button2' href='deletematch.php?mn=$row[match_id]' onclick='return checkdelete()'>DELETE</a>
                             </td>
                         </tr>
                         ";

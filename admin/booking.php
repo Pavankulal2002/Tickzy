@@ -50,7 +50,7 @@
          
                 <li>
                     <i class="fa fa-globe"></i>
-                    <a href="stadium.html">Stadiums</a>
+                    <a href="stadium.php">Stadiums</a>
                      
                 </li>
 
@@ -73,7 +73,7 @@
 
                 <li>
                     <i class="fa fa-info-circle"></i>
-                    <a href="logout.html">Logout</a>
+                    <a href="logout.php">Logout</a>
                 </li>  
             </div>
             </ul>
@@ -90,9 +90,15 @@
             <table class="">
                 <thead>
                 <tr>
-                    <th>MATCH ID</th>
-                    <th>MATCH</th>
+                    <th>BOOKING ID</th>
+                    <th>NAME</th>
                     <th>DATE</th>
+                    <th>MATCH ID</th>
+                    <th>SEAT ID</th>
+                   <th>CONTACT NUMBER</th>
+                    <th>EMAIL</th>
+                    <th>REFERENCE ID</th>
+                    <th>OPERATIONS</th>
                     
                     <!-- <th colspan="2">OPERATIONS</th> -->
                 </tr>
@@ -101,7 +107,7 @@
                
                 include ("../Database file/dbconnect.php");
 
-                $sql = "SELECT * FROM `book`";
+                $sql = "SELECT * FROM `booked`";
                 $result = mysqli_query($conn, $sql);
 
                 // Find the number of records returned
@@ -114,9 +120,18 @@
                     while($row = mysqli_fetch_assoc($result)){
                         echo "
                         <tr>
+                            <td>".$row['book_id']."</td>
+                            <td>".$row['book_name']."</td>
+                            <td>".$row['book_departure']."</td>
                             <td>".$row['match_id']."</td>
-                            <td>".$row['match1']."</td>
-                            <td>".$row['date']."</td>
+                            <td>".$row['acc_id']."</td>
+                            <td>".$row['book_contact']."</td>
+                            <td>".$row['book_address']."</td>
+                            <td>".$row['book_tracker']."</td>
+
+                            <td>
+                            <a class='button2' href='deletebooking.php?si=$row[book_id]' onclick='return checkdelete()'>DELETE</a>
+                            </td>
                         </tr>
                         ";
                     }
