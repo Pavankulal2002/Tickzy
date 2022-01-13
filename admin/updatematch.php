@@ -1,5 +1,6 @@
 <?php
 	include ("../Database file/dbconnect.php");
+    error_reporting(0);
 
     $matchno = $_GET['mn'];
 	$date = $_GET['date'];
@@ -12,7 +13,7 @@
 	$match = $_POST["match"];
 	$stadium=$_POST["stadium"];
 
-	$sql ="UPDATE matches SET match_no='$matchno',date='$date',match='$match',venue='$stadium' WHERE match_no='$matchno'";
+	$sql ="UPDATE origin SET match_id='$matchno',`date`='$date',match_desc='$match',venue='$stadium' WHERE match_id='$matchno'";
 	
 	$result = mysqli_query($conn, $sql);
 	

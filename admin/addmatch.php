@@ -12,8 +12,8 @@
         <form action="addmatch.php" method="post">
             <div class="container">
                 <h1>Add Matches</h1>
-                <label><b>Match Number</b></label>
-                <input type="text" placeholder="Enter Match Number" name="matchno" id="matchno" required>
+                <!-- <label><b>Match Number</b></label>
+                <input type="text" placeholder="Enter Match Number" name="matchno" id="matchno" required> -->
                 <label><b>Match Date</b></label>
                 <input type="date" placeholder="Enter Match Date" name="date" id="date" required>
                 <label><b>Match</b></label>
@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$stadium=$_POST["stadium"];
 			
 	
-	$sql = "INSERT INTO `matches` (`match_no`, `date`, `match`, `venue`) VALUES ('$matchno', '$date', '$match', '$stadium')";
+	$sql = "INSERT INTO `origin` ( `date`, `match_desc`, `venue`) VALUES ( '$date', '$match', '$stadium')";
 	
 	$result = mysqli_query($conn, $sql);
 	
