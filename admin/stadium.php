@@ -33,9 +33,7 @@
                     </ul>
                 </div>  -->
 
-                <div class="account">
-                    <a class='btn3' href='changepswd.php'>Change Password</a>
-                </div>
+                
             </div>
         </div>
 
@@ -44,7 +42,7 @@
                 <div class="toggle">
                 <li >
                     <i class="fa fa-signal"></i>
-                    <a href="dashboard.html">Dashboard</a>  
+                    <a href="dashboard.php">Dashboard</a>  
                     <div class="togglebtn"></div>  
                 </li>
   
