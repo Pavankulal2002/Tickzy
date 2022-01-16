@@ -115,6 +115,7 @@ require_once('data/get_matches.php');
 					  <div class="form-group">
 					    <label for="">Select Match:</label>
 					    <select class="btn btn-default" id="orig-id" required>
+						<option value="" >Select</option>
 					    <?php foreach($origins as $o): ?>
 					    	<option value="<?= $o['match_id']; ?>" > <?= $o['match_desc']; ?></option>
 				    	<?php endforeach; ?>
@@ -147,7 +148,7 @@ require_once('data/get_matches.php');
 
 		if(dept.length == 0){
 			alert('Please Select Departure Date!');
-		}else if(origin==1){
+		}else if(origin==0){
 			alert('Please Select Match');
 		}else{
 			$.ajax({

@@ -22,8 +22,10 @@
         if(mysqli_num_rows($result) == 1){
           while ($row = mysqli_fetch_assoc($result)) {
             if (password_verify($password, $row['password'])) {
-              
+             
+              $_SESSION['username'] = $username ;
                 header("Location: ../User/index.html");
+               
             }else{
                 header('location: logout.php');
                 $errorMsg = "Email or Password is invalid";

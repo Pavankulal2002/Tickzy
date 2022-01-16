@@ -22,6 +22,8 @@ $getSit = $db->getRow($sqlGetSit, [1]);//1 means sitting
 
 $date = $_SESSION['departure_date'];
 //with ana nga date
+
+
 $sqlBookedSit = "SELECT COUNT(*) as sit
 				 FROM booked 
 				 WHERE acc_id = ?
@@ -30,7 +32,6 @@ $sqlBookedSit = "SELECT COUNT(*) as sit
 $totalSit = $db->getRow($sqlBookedSit, [1, $date]);
 
 
-// ika duha
 $sqlEcoA = "SELECT * 
 			   FROM accomodation
 			   WHERE acc_id = ?;
