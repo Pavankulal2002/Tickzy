@@ -22,6 +22,8 @@
         if(mysqli_num_rows($result) == 1){
           while ($row = mysqli_fetch_assoc($result)) {
             if (password_verify($password, $row['password'])) {
+
+              session_start();
              
               $_SESSION['username'] = $username ;
                 header("Location: ../User/index.html");
