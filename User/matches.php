@@ -16,7 +16,7 @@ if(isset($_SESSION['username'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile</title>
+    <title>Upcoming Matches</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -33,20 +33,17 @@ if(isset($_SESSION['username'])){
     padding: 8px;
 }
 
+tbody {
+    font-size: 1.5rem;
+}
+
 thead th {
      width: 20%;
     }
-tbody{
-    font-size : 2rem;
-    background :rgb(136, 212, 231);
-    text-align:center;
-    font-weight: bold;
-}
 table {
 
         border-collapse: collapse;
         background-color: rgba(255, 255, 255, 0.918);
-        margin-top :5rem;
         margin-left: auto;
         margin-right: auto;
     }
@@ -157,7 +154,7 @@ a:hover {
         <a data-aos="zoom-in-left" data-aos-delay="450" href="./matches.php">upcoming matches</a>
         <a data-aos="zoom-in-left" data-aos-delay="600" href="./history.php">booking history</a>
       <a data-aos="zoom-in-left" data-aos-delay="750" href="./profile.php">Profile</a>  
-     
+      
     </nav>
 
     <a data-aos="zoom-in-left" data-aos-delay="1300" href="../booking/reserved.php" class="btn">book now</a>
@@ -168,18 +165,18 @@ a:hover {
 <div class=profile>
 
                 <!-- <h2>hii Pavan,</h2> -->
-                <h1>PROFILE</h1>
-                <center><img class = 'img - circle profile_img' height=50 width=50 src='./images/profile.png' background-color=white> </center>
+                <h1>Upcoming Matches</h1>
+                
         
         <div>
             <table class="table">
                 <thead>
                 <tr>
-                    <th>USERNAME</th>
-                    <th>EMAIL</th>
-                    <!-- <th>MATCH</th>
-                    <th>STADIUM</th>
-                    <th colspan="2">OPERATIONS</th> -->
+                    <th>MATCHID</th>
+                    <th>MATCH</th>
+                    <th>DATE</th>
+                    <th>VENUE</th>
+                    
                 </tr>
                 </thead>
             <?php
@@ -188,7 +185,7 @@ a:hover {
 
                 $user =$_SESSION['username'];
 
-                $sql = "SELECT * FROM `user` WHERE username='$user'";
+                $sql = "SELECT * FROM `origin` ";
                 $result = mysqli_query($conn, $sql);
 
                 // Find the number of records returned
@@ -200,11 +197,16 @@ a:hover {
                     // We can fetch in a better way using the while loop
                     while($row = mysqli_fetch_assoc($result)){
                         echo "
+                        <tbody>
                         <tr>
-                            <td>".$row['username']."</td>
-                            <td>".$row['email']."</td>
+                            <td>".$row['match_id']."</td>
+                            <td>".$row['match_desc']."</td>
+                            <td>".$row['date']."</td>
+                            <td>".$row['venue']."</td>
+                           
                             
                         </tr>
+                        <tbody>
                         ";
                     }
                 }
