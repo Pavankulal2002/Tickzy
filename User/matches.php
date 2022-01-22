@@ -239,6 +239,7 @@ a:hover {
 	echo '<strong>';
 	echo 'Page Not Exist';
 	echo '</strong>';
+    header('location: ../pages/adminlogin.html');
 }//end if else isset
 
  ?>

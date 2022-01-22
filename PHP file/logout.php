@@ -5,5 +5,7 @@ if(session_status() == PHP_SESSION_NONE)
 }
 
 unset($_SESSION['logged']);
+session_unset();
+session_destroy();
 
 header('Location: ../Pages/home.html');
