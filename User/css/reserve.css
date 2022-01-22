@@ -125,7 +125,7 @@ section {
 
 #menu-btn {
   font-size: 2.5rem;
-  color: #fff;
+  color: rgb(136, 212, 231);
   cursor: pointer;
   display: none;
 }
