@@ -37,9 +37,11 @@ thead th {
      width: 20%;
     }
 table {
+
         border-collapse: collapse;
         background-color: rgba(255, 255, 255, 0.918);
-        margin-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
 thead {
     background-color: rgba(51, 51, 51, 0.924);
