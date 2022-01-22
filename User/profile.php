@@ -146,7 +146,7 @@ a:hover {
 
      <img class="logo" src="../images/Tickzy cropped (1).png" alt="Tickzy">
     <nav class="navbar">
-        <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">home</a>
+        <a data-aos="zoom-in-left" data-aos-delay="300" href="index.html">home</a>
         <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">upcoming matches</a>
         <a data-aos="zoom-in-left" data-aos-delay="600" href="#destination">booking history</a>
       <a data-aos="zoom-in-left" data-aos-delay="750" href="#services">Profile</a> 

@@ -119,8 +119,14 @@ if(isset($_SESSION['accomodation'])){
 					<form class="form-horizontal" role="form" id="form-pass">
 					  <div class="form-group">
 					    <label for="">Booked By:</label>
-					    <input type="text" class="form-control" id="book-by" placeholder="Enter Name"
-					    autofocus="" required autocomplete="off">
+						<?php
+						 include ("../Database file/dbconnect.php");
+
+						 $user =$_SESSION['username'];
+						 
+						?>
+					    <input type="text" class="form-control" id="book-by" placeholder="<?=$user?>" value="<?=$user?>"
+					    readonly >
 					  </div>
 					  <div class="form-group">
 					    <label for="">Contact:</label>
