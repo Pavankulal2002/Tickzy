@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+    header('location: ../pages/adminlogin.html');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +42,8 @@
                         <li><i class="fa fa-bell"></i></li>
                     </ul>
                 </div>  -->
-
+                <div class="account">
+                </div>
                 
             </div>
         </div>

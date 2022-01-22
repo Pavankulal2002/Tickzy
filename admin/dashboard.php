@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+    header('location: ../pages/adminlogin.html');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +41,7 @@
       margin: 10px;
       padding: 20px;
       font-size: 30px;
-      height: 50px;
+      height: 45px;
       width: 215px;
       border-radius: 20px;
       justify-self: start;
@@ -256,21 +266,21 @@ span{
 
                     <div class="mySlides fade">
                     <div class="numbertext">1 / 3</div>
-                    <img src="../User/images/M.Chinnaswamy-Stadium.jpg" style="width:100%; height:270px;">
+                    <img src="../User/images/M.Chinnaswamy-Stadium.jpg" style="width:100%; height:250px;">
                     <div class="text"><h3>M. Chinnaswamy Stadium</h3>
                 <p>Bangalore, Karnataka</p></div>
                     </div>
 
                     <div class="mySlides fade">
                     <div class="numbertext">2 / 3</div>
-                    <img src="../User/images/melbourne-cricket-ground-me1215.jpg" style="width:100%;height:270px;">
+                    <img src="../User/images/melbourne-cricket-ground-me1215.jpg" style="width:100%;height:250px;">
                     <div class="text"><h3>Eden Gardens</h3>
                 <p> Kolkata, India.</p></div>
                     </div>
 
                     <div class="mySlides fade">
                     <div class="numbertext">3 / 3</div>
-                    <img src="../User/images/wankhade stadium.jpg" style="width:100%;height:270px;">
+                    <img src="../User/images/wankhade stadium.jpg" style="width:100%;height:250px;">
                     <div class="text"><h3>Wankhede Stadium</h3>
                 <p>Mumbai,India.</p></div>
                     </div>

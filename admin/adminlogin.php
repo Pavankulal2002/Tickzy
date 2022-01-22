@@ -1,24 +1,32 @@
-<?php      
+<?php
+$login = false;
+$showError = false;
+if($_SERVER["REQUEST_METHOD"] == "POST"){      
     include('../Database file/dbconnect.php');  
     $username = $_POST['username'];  
     $password = $_POST['password'];  
       
-        //to prevent from mysqli injection  
-        $username = stripcslashes($username);  
-        $password = stripcslashes($password);  
-        $username = mysqli_real_escape_string($conn, $username);  
-        $password = mysqli_real_escape_string($conn, $password);  
-      
-        $sql = "select *from admin where user = '$username' and password = '$password'";  
-        $result = mysqli_query($conn, $sql);  
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+        $sql = "select * from admin where user = '$username' and password = '$password'";  
+        $result = mysqli_query($conn, $sql);   
         $count = mysqli_num_rows($result);  
           
         if($count == 1){  
-            echo "<h1><center> Login successful </center></h1>";
-            header('location: ../admin/dashboard.php');
+            while($row=mysqli_fetch_assoc($result)){
+                if ($count == 1){ 
+                    $login = true;
+                    session_start();
+                    $_SESSION['loggedin'] = true;
+                    $_SESSION['username'] = $username;
+                    header('location: ../admin/dashboard.php');
+                } 
+                else{
+                    $showError = "Invalid Credentials";
+                }
+            }
         }  
         else{  
             echo "<h1> Login failed. Invalid username or password.</h1>";  
-        }     
+        }    
+
+    }
 ?>  
