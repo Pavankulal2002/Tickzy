@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+      <title>Tickzy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+::selection{
+  color: #000;
+  background: rgba(255, 255, 255, 0.952);
+}
+nav{
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo img{
+height: 50%;
+width:50%;
+
+
+/*  text-decoration: none;
+color: #fff;
+  font-size: 35px;
+  font-weight: 600; */
+}
+.menu ul{
+  display: inline-flex;
+}
+.menu ul li{
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child{
+  margin-left: 0px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover{
+  background: #fff;
+  color: black;
+}
+.img{
+  background-image: url("../images/2.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 40%;
+  
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  
+}
+.center .title{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+  background-color: rgba(0, 255, 255, 0.568);
+  
+}
+
+.center .title2{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+  text-decoration: underline beige ;
+
+  
+}
+.center .sub_title{
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  margin-left: 5%;
+}
+.center .btns{
+  margin-top: 20px;
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 30px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.btns button:hover{
+  border: 2px solid black;
+  
+}
+.center .btns button:first-child{
+  color: #fff;
+  background: none;
+}
+.btns button:first-child:hover{
+  background: white;
+  color: black;
+}
+.center .btns button:last-child{
+  background: white;
+  color: black;
+}
+
+
+    </style>
+
+  
+
+
+   </head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <img  src="../images/Tickzy cropped (1).png" alt="Tickzy">
+      </div>
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <!-- <li><a href="#">Services</a></li> -->
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="loginmenu2.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="img"></div>
+  <div class="center">
+    <div class="title" style = " text-align:center; ">About Tickzy</div>
+    <div class="sub_title">➢Through this “ Tickzy ” - Online Stadium Booking System we are solving the customers problem in lot ways like booking the ticket early without visiting the stadium and stand in queue to just buy a ticket.</div>
+    <div class="sub_title">➢ It will also help to prevent crowding at ticket center.</div>
+    <div class="sub_title">➢ Create a system which makes it easier for customer to purchase the tickets that they want online.</div>
+    <div class="sub_title">➢ Create a more efficient and modern system for entry to the ground on a match day, which will reduce the cost match-by-match basis.</div>
+    </div>
+    
+  </div>
+</body>
+</html>
