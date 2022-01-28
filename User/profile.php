@@ -28,13 +28,16 @@ if(isset($_SESSION['username'])){
 
     <style>
 
-        th, td {
-    border: 1px solid black;
-    padding: 8px;
-}
+    th, td {
+    border: 1px solid #3f575e;
+    padding: 12px;
+    text-align: left;
+    }
 
-thead th {
-     width: 20%;
+th {
+     width: 30%;
+     background-color: rgba(51, 51, 51, 0.924);
+    color: white;
     }
 tbody{
     font-size : 2rem;
@@ -49,13 +52,9 @@ table {
         margin-top :5rem;
         margin-left: auto;
         margin-right: auto;
+        width:70%;
     }
-thead {
-    background-color: rgba(51, 51, 51, 0.924);
-    color: white;
-    font-size: 1.875rem;
-    letter-spacing: 2%;
-    }
+
 button{
     background-color: #b72c2c; 
     border: none;
@@ -81,58 +80,6 @@ h1 {
 .profile{
 margin-top : 100px;
 }
-.button1 {
-    display: block;
-    width: 65px;
-    height: 6px;
-    background: #2ba123;
-    padding: 9px;
-    text-align: center;
-    border-radius: 12px;
-    color: white;
-    font-weight: bold;
-    line-height: 7px;
-} 
-.button2 {
-    display: block;
-    width: 65px;
-    height: 6px;
-    background: #c22a2a;
-    padding: 9px;
-    text-align: center;
-    border-radius: 12px;
-    color: white;
-    font-weight: bold;
-    line-height: 7px;
-} 
-.btn3 {
-    display: block;
-    width: 140px;
-    height: 20px;
-    background: #2ba123;
-    padding: 9px;
-    text-align: center;
-    border-radius: 18px;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-   
-} 
-a:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-.click{
-    margin-top: 10px;
-    font-size: medium;
-    margin-left: 10px;
-}
-.click>a{
-    margin-top: 10px;
-    font-size: medium;
-}
-
-
 
 </style>
 
@@ -173,15 +120,10 @@ a:hover {
         
         <div>
             <table class="table">
-                <thead>
-                <tr>
-                    <th>USERNAME</th>
-                    <th>EMAIL</th>
-                    <!-- <th>MATCH</th>
-                    <th>STADIUM</th>
-                    <th colspan="2">OPERATIONS</th> -->
-                </tr>
-                </thead>
+            
+                    
+                    
+               
             <?php
                
                 include ("../Database file/dbconnect.php");
@@ -197,18 +139,21 @@ a:hover {
                 // echo " records found in the DataBase<br>";
 
                 if($num> 0){
-                    // We can fetch in a better way using the while loop
                     while($row = mysqli_fetch_assoc($result)){
                         echo "
                         <tr>
+                            <th>USERNAME</th>
                             <td>".$row['username']."</td>
+                        </tr>
+                        <tr>
+                            <th>EMAIL</th>
                             <td>".$row['email']."</td>
                             
                         </tr>
                         ";
-                    }
+                    
                 }
-               
+            }
             ?>
             </table>
 
