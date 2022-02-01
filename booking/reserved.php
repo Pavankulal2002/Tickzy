@@ -108,16 +108,25 @@ require_once('data/get_matches.php');
 				<div class="container-fluid">
 					<form class="form-horizontal" role="form" id="form-itinerary">
 					<center>
-					<div class="form-group">
+					<!-- <div class="form-group">
 					    <label for="">Date:</label>
 					    <input type="date" class="btn btn-default" id="dept-date" required>
-					  </div>
+					  </div> -->
 					  <div class="form-group">
 					    <label for="">Select Match:</label>
 					    <select class="btn btn-default" id="orig-id" required>
 						<option value="" >Select</option>
 					    <?php foreach($origins as $o): ?>
 					    	<option value="<?= $o['match_id']; ?>" > <?= $o['match_desc']; ?></option>
+				    	<?php endforeach; ?>
+					    </select>
+					  </div>
+					  <div class="form-group">
+					    <label for="">Date:</label>
+					    <select class="btn btn-default" id="dept-date" required>
+						<option value="" >Select</option>
+					    <?php foreach($origins as $o): ?>
+					    	<option value="<?= $o['match_id']; ?>" > <?= $o['date']; ?></option>
 				    	<?php endforeach; ?>
 					    </select>
 					  </div>
@@ -144,7 +153,7 @@ require_once('data/get_matches.php');
 		/* Act on the event */
 		var validate = "";
 		var origin = $('select[id=orig-id]').val();
-		var dept = $('input[id=dept-date]').val();
+		var dept = $('select[id=dept-date]').val();
 
 		if(dept.length == 0){
 			alert('Please Select Departure Date!');
