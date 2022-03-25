@@ -186,12 +186,12 @@ span{
                 </li>
 
                 <li>
-                    <i class="fas fa-folder-open"></i>
+                    <i class="fa fa-folder-open"></i>
                     <a href="matches.php">Matches</a>
                 </li>
 
                 <li>
-                    <i class="fas fa-credit-card"></i>
+                    <i class="fa fa-credit-card"></i>
                     <a href="booking.php">Booking</a>
                 </li>
 
@@ -217,7 +217,7 @@ span{
         <div class="flex-container1">
             <div class="flex-item">
               
-                <i class="fas fa-user" style="font-size:36px;color:#1f0c4c;float:left;"></i>
+                <i class="fa fa-user" style="font-size:36px;color:#1f0c4c;float:left;"></i>
                 <div class="flex-child">
                 <h1 class="info">
                 <?php 
@@ -230,7 +230,7 @@ span{
                 <span>Number of Users</span> 
             </div>
             <div class="flex-item">
-            <i class="fas fa-list" style="font-size:36px;color:#1f0c4c;float:left;"></i>
+            <i class="fa fa-list" style="font-size:36px;color:#1f0c4c;float:left;"></i>
             <div class="flex-child">
             <h1 class="info">
             
@@ -245,7 +245,7 @@ span{
             <span>Number of Booking</span>
             </div>
             <div class="flex-item">
-            <i class="fas fa-baseball-ball" style="font-size:40px;color:#1f0c4c;float:left;"></i>
+            <i class="fa fa-baseball-ball" style="font-size:40px;color:#1f0c4c;float:left;"></i>
             <div class="flex-child">
             
             <h1 class="info" >
